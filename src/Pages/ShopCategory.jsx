@@ -18,7 +18,7 @@ import Items from '../Component/Items/Items'
       </div>
       <div className="shopcategory-products">
        {all_product.map( (item,i) =>{
-        if(props.category !== item.category){
+        if(props.category === item.category){
           return<Items key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price} />
         }else{
           return null
